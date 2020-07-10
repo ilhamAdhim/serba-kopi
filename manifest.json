@@ -1,0 +1,16 @@
+{
+  "name": "Serba Kopi",
+  "short_name": "Serba Kopi",
+  "description": "Semua tentang Kopi",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#5d4037",
+  "theme_color": "#5d4037",
+  "icons": [
+    {
+      "src": "iconkopi.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
