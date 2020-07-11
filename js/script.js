@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                         // Muat konten halaman yang dipanggil
                         page = event.target.getAttribute("href").substr(1);
-                        console.log(page)
                         loadPage(page);
                     });
                 });

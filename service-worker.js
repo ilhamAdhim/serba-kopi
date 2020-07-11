@@ -28,7 +28,10 @@ let urlsToCache = [
     '/images/idea.png',
     '/images/latte.jpg',
     '/images/moccachino.jpg',
-    './images/offline.png'
+    './images/offline.png',
+    './manifest.json',
+    'https://unpkg.com/aos@next/dist/aos.js',
+    'https://unpkg.com/aos@next/dist/aos.css'
 ];
 
 // Using assets from browser cache 
