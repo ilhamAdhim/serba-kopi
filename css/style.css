@@ -57,3 +57,7 @@ h5 {
   transform: translate(-50%, -50%);
   color: rgb(150, 150, 150);
 }
+
+.text-large {
+  font-size: large;
+}
