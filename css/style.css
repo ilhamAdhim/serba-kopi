@@ -61,3 +61,7 @@ h5 {
 .text-large {
   font-size: large;
 }
+
+ul.browser-default li {
+  list-style-type: initial;
+}
