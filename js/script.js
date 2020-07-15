@@ -1,3 +1,18 @@
+AOS.init();
+// REGISTER SERVICE WORKER
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+        navigator.serviceWorker.register('../service-worker.js')
+            .then(function () {
+                console.log('Pendaftaran ServiceWorker berhasil');
+            })
+            .catch(function () {
+                console.log('Pendaftaran ServiceWorker gagal');
+            });
+    })
+} else {
+    console.log("ServiceWorker belum didukung browser ini.")
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     // Activate sidebar nav
@@ -8,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function loadNav() {
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
-            if (this.readyState == 4) {
-                if (this.status != 200) return;
+            if (this.readyState === 4) {
+                if (this.status !== 200) return;
 
                 // Muat daftar tautan menu
                 document.querySelectorAll(".topnav, .sidenav").forEach(function (elm) {
@@ -43,9 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
     function loadPage(page) {
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
-            if (this.readyState == 4) {
+            if (this.readyState === 4) {
                 let content = document.querySelector("#body-content");
-                if (this.status == 200) {
+                if (this.status === 200) {
                     content.innerHTML = xhttp.responseText;
                 } else if (this.status == 404) {
                     // Jika user online, tapi file html tidak ada di server
