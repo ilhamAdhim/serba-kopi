@@ -34,24 +34,6 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/materialize.min.js"></script>
     <script src="js/script.js"></script>
-    <script>
-        AOS.init();
-        // REGISTER SERVICE WORKER
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function () {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(function () {
-                        console.log('Pendaftaran ServiceWorker berhasil');
-                    })
-                    .catch(function () {
-                        console.log('Pendaftaran ServiceWorker gagal');
-                    });
-            })
-        } else {
-            console.log("ServiceWorker belum didukung browser ini.")
-        }
-    </script>
-
     <footer class="brown darken-2  white-text" style="padding: 2em; text-align:center">
         Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
             href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>
